@@ -60,14 +60,18 @@ To add this package to your Unity project:
 }
 ```
 
-### Using `Skew` in UXML and USS
+### Using `Skew` and `SkewButton` in UXML and USS
 
 **UXML:**
 ```xml
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:ps="Playsmart.UIToolkit">
+    <!-- Container -->
     <ps:Skew class="slanted-card">
         <ui:Label text="Procedural Parallelogram" />
     </ps:Skew>
+
+    <!-- Button -->
+    <ps:SkewButton class="slanted-card" text="PLAY GAME" />
 </ui:UXML>
 ```
 
@@ -80,6 +84,7 @@ To add this package to your Unity project:
     --skew-fill-color: rgba(20, 20, 30, 0.8);
     --skew-stroke-color: cyan;
     --skew-stroke-width: 1.5;
+    --skew-text-color: #ffffff;
 }
 ```
 

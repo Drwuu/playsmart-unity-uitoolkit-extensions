@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 480" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#0a0813"/>
+  
+  <!-- Grid Lines (Subtle background) -->
+  <defs>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.03"/>
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <!-- ==================== CASE A: POSITIVE SKEW ==================== -->
+  <g transform="translate(0, 0)">
+    <!-- Bounding Box (Original Rectangle) -->
+    <rect x="80" y="120" width="300" height="180" fill="none" stroke="#ffffff" stroke-dasharray="5,5" stroke-width="1.5" opacity="0.3"/>
+    <text x="80" y="50" fill="#00f0ff" font-family="'Montserrat', sans-serif" font-size="16" font-weight="bold">CASE A: Positive Skew (Angle > 0)</text>
+    <text x="80" y="80" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="11" opacity="0.5">Original Bounds (width=300, height=180)</text>
+
+    <!-- Left Side Triangle (Void/Cutout) -->
+    <polygon points="80,120 130,120 80,300" fill="#ff0055" fill-opacity="0.1" stroke="#ff0055" stroke-dasharray="3,3" stroke-width="1.2"/>
+    
+    <!-- Skewed Parallelogram -->
+    <polygon points="130,120 380,120 330,300 80,300" fill="#00f0ff" fill-opacity="0.12" stroke="#00f0ff" stroke-width="2.5"/>
+
+    <!-- Left anchors indicators -->
+    <circle cx="130" cy="120" r="4" fill="#ff0055"/>
+    <text x="140" y="135" fill="#ff0055" font-family="'Space Mono', monospace" font-size="10" font-weight="bold">leftTop = slantOffset (50)</text>
+
+    <circle cx="80" cy="300" r="4" fill="#ff0055"/>
+    <text x="90" y="315" fill="#ff0055" font-family="'Space Mono', monospace" font-size="10" font-weight="bold">leftBottom = 0</text>
+
+    <!-- Right anchors indicators -->
+    <circle cx="380" cy="120" r="4" fill="#ff0055"/>
+    <text x="310" y="110" fill="#ff0055" font-family="'Space Mono', monospace" font-size="10" font-weight="bold">rightTop = width (300)</text>
+
+    <circle cx="330" cy="300" r="4" fill="#ff0055"/>
+    <text x="250" y="315" fill="#ff0055" font-family="'Space Mono', monospace" font-size="10" font-weight="bold">rightBottom = width - slantOffset (250)</text>
+
+    <!-- slantOffset Indicator Line -->
+    <line x1="80" y1="105" x2="130" y2="105" stroke="#ff0055" stroke-width="1.5"/>
+    <line x1="80" y1="100" x2="80" y2="110" stroke="#ff0055" stroke-width="1.5"/>
+    <line x1="130" y1="100" x2="130" y2="110" stroke="#ff0055" stroke-width="1.5"/>
+    <text x="105" y="95" fill="#ff0055" font-family="'Montserrat', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">+slantOffset</text>
+
+    <!-- Angle indicator arc -->
+    <path d="M 80,250 A 50,50 0 0,1 94.1,252" fill="none" stroke="#ff0055" stroke-width="1.5"/>
+    <text x="100" y="250" fill="#ff0055" font-family="'Montserrat', sans-serif" font-size="11" font-weight="bold">θ &gt; 0</text>
+  </g>
+
+  <!-- ==================== CASE B: NEGATIVE SKEW ==================== -->
+  <g transform="translate(460, 0)">
+    <!-- Bounding Box (Original Rectangle) -->
+    <rect x="80" y="120" width="300" height="180" fill="none" stroke="#ffffff" stroke-dasharray="5,5" stroke-width="1.5" opacity="0.3"/>
+    <text x="80" y="50" fill="#ff0055" font-family="'Montserrat', sans-serif" font-size="16" font-weight="bold">CASE B: Negative Skew (Angle &lt; 0)</text>
+    <text x="80" y="75" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="11" opacity="0.5">Original Bounds (width=300, height=180)</text>
+
+    <!-- Left Side Triangle (Void/Cutout) -->
+    <polygon points="80,120 130,300 80,300" fill="#ff0055" fill-opacity="0.1" stroke="#ff0055" stroke-dasharray="3,3" stroke-width="1.2"/>
+    
+    <!-- Skewed Parallelogram -->
+    <polygon points="80,120 330,120 380,300 130,300" fill="#00f0ff" fill-opacity="0.12" stroke="#00f0ff" stroke-width="2.5"/>
+
+    <!-- Left anchors indicators -->
+    <circle cx="80" cy="120" r="4" fill="#ff0055"/>
+    <text x="90" y="135" fill="#ff0055" font-family="'Space Mono', monospace" font-size="10" font-weight="bold">leftTop = 0</text>
+
+    <circle cx="130" cy="300" r="4" fill="#ff0055"/>
+    <text x="140" y="285" fill="#ff0055" font-family="'Space Mono', monospace" font-size="10" font-weight="bold">leftBottom = -slantOffset (50)</text>
+
+    <!-- Right anchors indicators -->
+    <circle cx="330" cy="120" r="4" fill="#ff0055"/>
+    <text x="220" y="110" fill="#ff0055" font-family="'Space Mono', monospace" font-size="10" font-weight="bold">rightTop = width + slantOffset (250)</text>
+
+    <circle cx="380" cy="300" r="4" fill="#ff0055"/>
+    <text x="290" y="315" fill="#ff0055" font-family="'Space Mono', monospace" font-size="10" font-weight="bold">rightBottom = width (300)</text>
+
+    <!-- slantOffset Indicator Line -->
+    <line x1="80" y1="320" x2="130" y2="320" stroke="#ff0055" stroke-width="1.5"/>
+    <line x1="80" y1="314" x2="80" y2="325" stroke="#ff0055" stroke-width="1.5"/>
+    <line x1="130" y1="314" x2="130" y2="325" stroke="#ff0055" stroke-width="1.5"/>
+    <text x="105" y="337" fill="#ff0055" font-family="'Montserrat', sans-serif" font-size="10" font-weight="bold" text-anchor="middle">-slantOffset</text>
+
+    <!-- Angle indicator arc -->
+    <path d="M 80,170 A 50,50 0 0,0 94.1,168" fill="none" stroke="#ff0055" stroke-width="1.5"/>
+    <text x="100" y="165" fill="#ff0055" font-family="'Montserrat', sans-serif" font-size="11" font-weight="bold">θ &lt; 0</text>
+  </g>
+
+  <!-- Math Summary Card -->
+  <g transform="translate(230, 395)">
+    <rect x="0" y="0" width="460" height="60" rx="6" fill="#141126" stroke="#00f0ff" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="230" y="24" fill="#ffffff" font-family="'Montserrat', sans-serif" font-size="11" font-weight="bold" text-anchor="middle">Math Formula (used for both Case A &amp; Case B):</text>
+    <text x="230" y="44" fill="#ff0055" font-family="'Space Mono', monospace" font-size="12" font-weight="bold" text-anchor="middle">slantOffset = height * Tan(Angle)</text>
+  </g>
+</svg>

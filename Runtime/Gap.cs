@@ -71,36 +71,25 @@ namespace Playsmart.UIToolkit
 
 		private void ClearMargins(VisualElement element)
 		{
-			element.style.marginRight = StyleKeyword.Null;
-			element.style.marginLeft = StyleKeyword.Null;
-			element.style.marginTop = StyleKeyword.Null;
-			element.style.marginBottom = StyleKeyword.Null;
+			if (element.style.marginRight != StyleKeyword.Null) element.style.marginRight = StyleKeyword.Null;
+			if (element.style.marginLeft != StyleKeyword.Null) element.style.marginLeft = StyleKeyword.Null;
+			if (element.style.marginTop != StyleKeyword.Null) element.style.marginTop = StyleKeyword.Null;
+			if (element.style.marginBottom != StyleKeyword.Null) element.style.marginBottom = StyleKeyword.Null;
 		}
 
 		private void ApplyTargetMargin(VisualElement child, FlexDirection direction, float targetMargin)
 		{
-			// Reset standard layout margins first to avoid conflicts
-			ClearMargins(child);
+			StyleLength targetLength = targetMargin;
 
-			switch (direction)
-			{
-				case FlexDirection.Column:
-					if (Mathf.Abs(child.resolvedStyle.marginBottom - targetMargin) > 0.01f)
-						child.style.marginBottom = targetMargin;
-					break;
-				case FlexDirection.ColumnReverse:
-					if (Mathf.Abs(child.resolvedStyle.marginTop - targetMargin) > 0.01f)
-						child.style.marginTop = targetMargin;
-					break;
-				case FlexDirection.RowReverse:
-					if (Mathf.Abs(child.resolvedStyle.marginLeft - targetMargin) > 0.01f)
-						child.style.marginLeft = targetMargin;
-					break;
-				default: // FlexDirection.Row
-					if (Mathf.Abs(child.resolvedStyle.marginRight - targetMargin) > 0.01f)
-						child.style.marginRight = targetMargin;
-					break;
-			}
+			StyleLength expectedMarginLeft = (direction == FlexDirection.RowReverse) ? targetLength : StyleKeyword.Null;
+			StyleLength expectedMarginRight = (direction == FlexDirection.Row) ? targetLength : StyleKeyword.Null;
+			StyleLength expectedMarginTop = (direction == FlexDirection.ColumnReverse) ? targetLength : StyleKeyword.Null;
+			StyleLength expectedMarginBottom = (direction == FlexDirection.Column) ? targetLength : StyleKeyword.Null;
+
+			if (child.style.marginLeft != expectedMarginLeft) child.style.marginLeft = expectedMarginLeft;
+			if (child.style.marginRight != expectedMarginRight) child.style.marginRight = expectedMarginRight;
+			if (child.style.marginTop != expectedMarginTop) child.style.marginTop = expectedMarginTop;
+			if (child.style.marginBottom != expectedMarginBottom) child.style.marginBottom = expectedMarginBottom;
 		}
 	}
 }

@@ -1,0 +1,19 @@
+{
+	"name": "com.playsmart.uitoolkit-extensions",
+	"version": "1.0.0",
+	"displayName": "Playsmart UI Toolkit Extensions",
+	"description": "Permissive, performance-safe custom VisualElements and styling extensions for Unity UI Toolkit (for now: Gap, Skew).",
+	"unity": "2022.3",
+	"author": {
+		"name": "Ludwig Wourms",
+		"email": "66587213+Drwuu@users.noreply.github.com"
+	},
+	"keywords": [
+		"unity",
+		"ui-toolkit",
+		"uss",
+		"uxml",
+		"ui",
+		"playsmart"
+	]
+}

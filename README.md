@@ -90,5 +90,9 @@ To add this package to your Unity project:
 
 ---
 
+If this library helps your workflow, please consider leaving a ⭐️ to help other Unity developers find it!
+
+---
+
 ## License
 Licensed under the [MIT License](LICENSE).

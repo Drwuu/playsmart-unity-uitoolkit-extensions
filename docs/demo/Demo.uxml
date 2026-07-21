@@ -1,20 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ui="UnityEngine.UIElements"
-    xmlns:ps="Playsmart.UIToolkit"
-    xsi:noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd"
->
-    <Style src="Demo.uss" />
-
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:ps="Playsmart.UIToolkit" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/playsmart-unity-uitoolkit-extensions/docs/demo/Demo.uss?fileID=7433441132597879392&amp;guid=99415a58c2e45d34e9b64e466dddebcc&amp;type=3#Demo"/>
     <ui:VisualElement class="demo-screen">
-        <!-- Header -->
-        <ui:Label text="UI TOOLKIT EXTENSIONS DEMO" class="demo-title" />
-
-        <!-- Gap Container with Skewed Buttons inside -->
+        <ui:Label text="UI TOOLKIT EXTENSIONS DEMO" class="demo-title"/>
         <ps:Gap class="menu-container">
-            <ps:SkewButton text="PLAY GAME" class="menu-btn" />
-            <ps:SkewButton text="SETTINGS" class="menu-btn" />
-            <ps:SkewButton text="EXIT" class="menu-btn" />
+            <ps:SkewButton text="PLAY GAME" emoji-fallback-support="true" enable-rich-text="true" double-click-selects-word="true" triple-click-selects-line="true" display-tooltip-when-elided="true" enabled="true" class="menu-btn"/>
+            <ps:SkewButton text="SETTINGS" class="menu-btn"/>
+            <ps:SkewButton text="EXIT" class="menu-btn"/>
         </ps:Gap>
     </ui:VisualElement>
 </ui:UXML>

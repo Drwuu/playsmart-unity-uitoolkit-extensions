@@ -1,0 +1,9 @@
+Radial Bar is controlled using 7 attributes
+
+1: value: this ranges from 0 - 1 and represents how filled the radial bar is
+2: innerEmptyPercent: this is the size of the space in the centre, represented as a percentage (Known issue: using low Percentages with transparent colours will result in lines in the radial ring )
+3: Start angle: offset for the fill of the radial bar (Note: -90 is starting at top)
+4: clockwise: whether the bar fills clockwise or counterclockwise
+5: Rounded caps: gives the bar rounded caps on the ring rather than a flat end
+6: Progress Colour: this is the colour of the fill in the bar
+7: Track colour: this is the colour of the background ring

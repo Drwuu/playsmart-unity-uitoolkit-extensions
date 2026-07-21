@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Background" style="background-color: rgb(0, 0, 0); flex-grow: 1;">
+        <ui:VisualElement name="InnerSpace" style="background-color: rgba(0, 0, 0, 0); background-size: 10% 10%; border-top-width: 0; background-position-x: center; background-repeat: no-repeat no-repeat; flex-grow: 1; margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%;">
+            <ui:VisualElement name="TopText" style="flex-grow: 1; height: 10%;">
+                <ui:Label text="Radial Bar Demo" name="Label" style="-unity-text-align: middle-center; color: rgb(255, 255, 255); font-size: 39px; -unity-font-style: bold; margin-bottom: auto; margin-top: auto; -unity-text-auto-size: best-fit 10px 1000px;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="Radial" style="flex-grow: 1; height: 75%;">
+                <Playsmart.UIToolkit.RadialBar inner-empty-percent="0.5" value="0" rounded-caps="false" name="ring" style="margin-top: 5%; margin-right: 5%; margin-bottom: 5%; margin-left: 5%;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
